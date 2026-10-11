@@ -40,16 +40,12 @@ content:
         label: Public contact email
         type: string
         description: "Optional. Leave blank to hide."
-      - name: featured_note_text
-        label: Note intro text
-        type: string
-        description: "For example: working on"
       - name: featured_note_link
-        label: Note link text
+        label: Working on — project name
         type: string
-        description: "For example: sharesh.it"
+        description: "For example: ShareSh.it"
       - name: featured_note_url
-        label: Note link destination
+        label: Working on — project link
         type: string
         description: "Complete https:// URL. Only link to a domain you control."
   - name: posts
