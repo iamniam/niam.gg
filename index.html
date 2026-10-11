@@ -1,0 +1,58 @@
+---
+layout: default
+title: home
+description: "a little corner of the internet. niam is building for the web."
+---
+{% assign profile = site.data.profile %}
+<main>
+  <section class="hero">
+    <p class="eyebrow">a little corner of the internet</p>
+    <h1>{{ profile.headline | escape }}</h1>
+    <p class="tagline">{{ profile.tagline | escape }}</p>
+    <nav aria-label="on this page">
+      <a href="#about">about</a>
+      <a href="#now">now</a>
+      <a href="#notes">notes</a>
+      <a href="#links">links</a>
+    </nav>
+  </section>
+
+  <section class="section" id="about">
+    <h2>about</h2>
+    <p>{{ profile.about | escape }}</p>
+  </section>
+
+  <section class="section" id="now">
+    <h2>now</h2>
+    <p>{{ profile.currently | escape }}</p>
+  </section>
+
+  <section class="section" id="notes">
+    <h2>notes <a href="{{ '/feed.xml' | relative_url }}" aria-label="subscribe via RSS">↗</a></h2>
+    {% for post in site.posts limit: 10 %}
+    <article class="note">
+      <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
+    </article>
+    {% else %}
+    <p class="empty">nothing here yet. check back soon.</p>
+    {% endfor %}
+  </section>
+
+  <section class="section" id="links">
+    <h2>elsewhere online</h2>
+    <div class="links">
+      {% if profile.github and profile.github != empty %}
+      <a href="{{ profile.github | escape }}" rel="me noopener noreferrer">github ↗</a>
+      {% endif %}
+      {% if profile.x and profile.x != empty %}
+      <a href="{{ profile.x | escape }}" rel="me noopener noreferrer">𝕏 ↗</a>
+      {% endif %}
+      {% if profile.email and profile.email != empty %}
+      <a href="mailto:{{ profile.email | escape }}">email ↗</a>
+      {% endif %}
+      <a href="{{ '/feed.xml' | relative_url }}" type="application/rss+xml">rss ↗</a>
+    </div>
+  </section>
+</main>
