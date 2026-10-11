@@ -34,12 +34,7 @@
               <xsl:for-each select="channel/item">
                 <article>
                   <small class="muted"><xsl:value-of select="pubDate"/></small>
-                  <h2>
-                    <a>
-                      <xsl:attribute name="href"><xsl:value-of select="link"/></xsl:attribute>
-                      <xsl:value-of select="title"/>
-                    </a>
-                  </h2>
+                  <h2><xsl:value-of select="title"/></h2>
                   <div class="post-body"><xsl:value-of select="description" disable-output-escaping="yes"/></div>
                 </article>
               </xsl:for-each>
