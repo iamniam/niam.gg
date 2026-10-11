@@ -1,7 +1,7 @@
 ---
 title: hello, internet.
 date: 2026-10-10
-published: true
+published: false
 ---
 a sample note to show how posting works.
 
