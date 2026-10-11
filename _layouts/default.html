@@ -19,11 +19,6 @@
 </head>
 <body>
   <div class="page">
-    <header class="masthead">
-      {% if profile.x and profile.x != empty %}
-      <a class="rss-link" href="{{ profile.x | escape }}" rel="me noopener noreferrer">𝕏</a>
-      {% endif %}
-    </header>
     {{ content }}
     <footer class="footer">
       <span>© 2026 Ordinary Inc.</span>
