@@ -27,17 +27,6 @@ description: "niam dennegar's personal homepage. building in public."
     {% endif %}
   </section>
 
-  <section class="section" id="notes">
-    <h2>blog</h2>
-    {% for post in site.posts limit: 10 %}
-    <article class="note">
-      <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
-      <h3><a href="{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
-      <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
-    </article>
-    {% endfor %}
-  </section>
-
   <section class="section" id="links">
     <h2>elsewhere online</h2>
     <div class="links">
@@ -52,5 +41,16 @@ description: "niam dennegar's personal homepage. building in public."
       <a href="{{ profile.x | escape }}" rel="me noopener noreferrer">𝕏</a>
       {% endif %}
     </div>
+  </section>
+
+  <section class="section" id="notes">
+    <h2>blog</h2>
+    {% for post in site.posts limit: 10 %}
+    <article class="note">
+      <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
+      <h3><a href="{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
+      <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
+    </article>
+    {% endfor %}
   </section>
 </main>
