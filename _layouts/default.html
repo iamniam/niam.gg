@@ -6,7 +6,6 @@
   {% assign profile = site.data.profile %}
   {% assign rootprefix = '' %}
   {% if page.layout == 'post' %}{% assign rootprefix = '../../' %}{% endif %}
-  {% if page.rss_archive %}{% assign rootprefix = '../' %}{% endif %}
   <title>{% if page.title and page.title != 'home' %}{{ page.title | escape }} · {% endif %}{{ profile.name | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="color-scheme" content="light">
