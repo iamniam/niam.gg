@@ -1,24 +1,17 @@
 ---
 layout: default
 title: home
-description: "a little corner of the internet. niam is building for the web."
+description: "niam dennegar's personal homepage. building in public."
 ---
 {% assign profile = site.data.profile %}
 <main>
   <section class="hero">
-    <p class="eyebrow">a little corner of the internet</p>
     <h1>{{ profile.headline | escape }}</h1>
     <p class="tagline">{{ profile.tagline | escape }}</p>
-    <nav aria-label="on this page">
-      <a href="#about">about</a>
-      <a href="#now">now</a>
-      <a href="#notes">notes</a>
-      <a href="#links">links</a>
-    </nav>
   </section>
 
   <section class="section" id="about">
-    <h2>about</h2>
+    <h2>about me</h2>
     <p>{{ profile.about | escape }}</p>
   </section>
 
@@ -28,15 +21,16 @@ description: "a little corner of the internet. niam is building for the web."
   </section>
 
   <section class="section" id="notes">
-    <h2>notes <a href="feed.xml" aria-label="subscribe via RSS">↗</a></h2>
+    <h2>notes</h2>
+    {% if profile.featured_note_url and profile.featured_note_url != empty and profile.featured_note_link and profile.featured_note_link != empty %}
+    <p class="featured-note">{{ profile.featured_note_text | escape }} <a href="{{ profile.featured_note_url | escape }}" rel="noopener noreferrer">{{ profile.featured_note_link | escape }}</a></p>
+    {% endif %}
     {% for post in site.posts limit: 10 %}
     <article class="note">
       <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
       <h3><a href="{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
       <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
     </article>
-    {% else %}
-    <p class="empty">nothing here yet. check back soon.</p>
     {% endfor %}
   </section>
 
@@ -44,15 +38,15 @@ description: "a little corner of the internet. niam is building for the web."
     <h2>elsewhere online</h2>
     <div class="links">
       {% if profile.github and profile.github != empty %}
-      <a href="{{ profile.github | escape }}" rel="me noopener noreferrer">github ↗</a>
+      <a href="{{ profile.github | escape }}" rel="me noopener noreferrer">github</a>
       {% endif %}
       {% if profile.x and profile.x != empty %}
-      <a href="{{ profile.x | escape }}" rel="me noopener noreferrer">𝕏 ↗</a>
+      <a href="{{ profile.x | escape }}" rel="me noopener noreferrer">𝕏</a>
       {% endif %}
       {% if profile.email and profile.email != empty %}
-      <a href="mailto:{{ profile.email | escape }}">email ↗</a>
+      <a href="mailto:{{ profile.email | escape }}">email</a>
       {% endif %}
-      <a href="feed.xml" type="application/rss+xml">rss ↗</a>
+      <a href="feed.xml" type="application/rss+xml">rss</a>
     </div>
   </section>
 </main>
