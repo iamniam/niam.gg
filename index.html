@@ -20,11 +20,16 @@ description: "niam dennegar's personal homepage. building in public."
     <p>{{ profile.currently | escape }}</p>
   </section>
 
+  <section class="section" id="working-on">
+    <h2>working on</h2>
+    {% if profile.featured_note_url and profile.featured_note_url != empty and profile.featured_note_link and profile.featured_note_link != empty %}
+    <p><a href="{{ profile.featured_note_url | escape }}" rel="noopener noreferrer">{{ profile.featured_note_link | escape }}</a></p>
+    {% endif %}
+  </section>
+
   <section class="section" id="notes">
     <h2>notes</h2>
-    {% if profile.featured_note_url and profile.featured_note_url != empty and profile.featured_note_link and profile.featured_note_link != empty %}
-    <p class="featured-note">{{ profile.featured_note_text | escape }} <a href="{{ profile.featured_note_url | escape }}" rel="noopener noreferrer">{{ profile.featured_note_link | escape }}</a></p>
-    {% endif %}
+    <p>a little web blog</p>
     {% for post in site.posts limit: 10 %}
     <article class="note">
       <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
