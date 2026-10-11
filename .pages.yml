@@ -80,4 +80,6 @@ content:
         type: rich-text
         options:
           format: markdown
-          switcher: false
+          switcher: true
+          path: media
+          rename: true
