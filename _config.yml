@@ -5,6 +5,12 @@ baseurl: ""
 permalink: /notes/:title/
 markdown: kramdown
 timezone: America/Chicago
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 exclude:
   - README.md
   - .pages.yml
