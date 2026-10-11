@@ -28,11 +28,11 @@ description: "a little corner of the internet. niam is building for the web."
   </section>
 
   <section class="section" id="notes">
-    <h2>notes <a href="{{ '/feed.xml' | relative_url }}" aria-label="subscribe via RSS">↗</a></h2>
+    <h2>notes <a href="feed.xml" aria-label="subscribe via RSS">↗</a></h2>
     {% for post in site.posts limit: 10 %}
     <article class="note">
       <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <h3><a href="{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
       <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
     </article>
     {% else %}
@@ -52,7 +52,7 @@ description: "a little corner of the internet. niam is building for the web."
       {% if profile.email and profile.email != empty %}
       <a href="mailto:{{ profile.email | escape }}">email ↗</a>
       {% endif %}
-      <a href="{{ '/feed.xml' | relative_url }}" type="application/rss+xml">rss ↗</a>
+      <a href="feed.xml" type="application/rss+xml">rss ↗</a>
     </div>
   </section>
 </main>
