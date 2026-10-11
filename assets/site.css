@@ -1,40 +1,118 @@
-/* Plain CSS. No tracking, frameworks, external fonts, or JS. */
-:root{color-scheme:light dark;--bg:#fbfaf7;--ink:#222521;--muted:#767b74;--line:#dcded7;--link:#295c82}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.8 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
-.page{max-width:660px;margin:0 auto;padding:36px 28px 46px}
-a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible{outline:2px solid var(--link);outline-offset:4px}
-.masthead,.footer{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.masthead{padding-bottom:22px;border-bottom:1px solid var(--line)}
-.site-name{font-size:17px;font-weight:750;letter-spacing:-.8px;text-decoration:none;color:var(--ink)}
-.dot{color:var(--link)}
-.rss-link{font-size:13px;text-decoration:none}
-.hero{padding:76px 0 65px}
-.eyebrow{margin:0 0 16px;color:var(--muted);font-size:12px;letter-spacing:.05em}
-h1{margin:0;font-size:clamp(29px,6vw,42px);line-height:1.3;letter-spacing:-1.5px;font-weight:750}
-.tagline{margin:17px 0 27px;font-size:17px;line-height:1.65}
-nav{display:flex;gap:19px;flex-wrap:wrap;font-size:13px}
-.section{padding:22px 0 27px;border-top:1px solid var(--line)}
-.section h2{font-size:13px;letter-spacing:.03em;font-weight:750;margin:0 0 15px}
-.section p{margin:0 0 9px}
-.muted,.date,.empty,.footer{color:var(--muted)}
-.note{padding:9px 0 18px}
-.note+.note{border-top:1px dotted var(--line);padding-top:18px}
-.date{font-size:12px}
-.note h3{margin:4px 0;font-size:15px;font-weight:650}
-.note h3 a{color:var(--ink)}
-.note p{font-size:14px;color:var(--muted);margin:0}
-.links{display:flex;flex-wrap:wrap;gap:13px 18px}
-.post-title{margin-top:10px}
-.post-date{margin-top:46px}
-.post-body{margin:34px 0 80px}
-.post-body p,.post-body ul,.post-body ol{margin:0 0 22px}
-.post-body img{max-width:100%;height:auto}
-.back{display:inline-block;margin:28px 0 0;font-size:13px}
-.footer{border-top:1px solid var(--line);padding-top:24px;margin-top:24px;font-size:11px;align-items:flex-start}
-@media(max-width:600px){.page{padding:22px 22px 42px}.hero{padding:60px 0 50px}.footer{flex-direction:column;gap:2px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media(prefers-color-scheme:dark){:root{--bg:#141613;--ink:#e6e8e1;--muted:#a2a69d;--line:#3c413a;--link:#a3caff}}
+/* niam.gg — simple, fast, old-web-at-heart. No frameworks or tracking. */
+:root {
+  color-scheme: light;
+  --bg: #fffefa;
+  --ink: #262626;
+  --muted: #656565;
+  --rule: #e8e5de;
+  --link: #1755a1;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  width: min(100% - 44px, 640px);
+  margin: 0 auto;
+  padding: 42px 0 34px;
+}
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+.site-name {
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+.site-name:hover { text-decoration: underline; }
+.dot { color: var(--link); }
+.rss-link { font-size: 14px; }
+.hero { padding: 48px 0 38px; }
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 29px);
+  line-height: 1.3;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+.tagline { margin: 12px 0 20px; font-size: 16px; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 17px;
+  font-size: 14px;
+}
+.section {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0 28px;
+  scroll-margin-top: 20px;
+}
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 650;
+  line-height: 1.4;
+}
+.section p { margin: 0; }
+#notes h2 a { font-weight: 400; font-size: 14px; }
+.note { padding: 8px 0 17px; }
+.note + .note { border-top: 1px solid var(--rule); padding-top: 16px; }
+.date, .empty { color: var(--muted); }
+.date { font-size: 13px; }
+.note h3 {
+  margin: 3px 0 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.note p { color: var(--muted); font-size: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin-top: 0;
+  padding: 19px 0 0;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+  color: var(--muted);
+}
+.back { display: inline-block; margin: 26px 0 0; font-size: 14px; }
+.post-date { margin: 35px 0 7px; }
+.post-title { margin-top: 0; }
+.post-body { margin: 26px 0 64px; }
+.post-body p, .post-body ul, .post-body ol { margin: 0 0 18px; }
+.post-body img { max-width: 100%; height: auto; }
+@media (max-width: 500px) {
+  .page { padding-top: 26px; padding-bottom: 30px; }
+  .hero { padding: 38px 0 33px; }
+  .footer { flex-direction: column; gap: 3px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
