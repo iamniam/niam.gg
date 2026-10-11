@@ -32,7 +32,7 @@ description: "niam dennegar's personal homepage. building in public."
     {% for post in site.posts limit: 10 %}
     <article class="note">
       <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
-      <h3><a href="{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
+      <h3>{{ post.title | escape }}</h3>
       <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
     </article>
     {% endfor %}
