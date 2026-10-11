@@ -1,0 +1,10 @@
+title: "niam"
+description: "a little corner of the internet."
+url: "https://niam.gg"
+baseurl: ""
+permalink: /notes/:title/
+markdown: kramdown
+timezone: America/Chicago
+exclude:
+  - README.md
+  - .pages.yml
