@@ -8,7 +8,7 @@
   {% if page.layout == 'post' %}{% assign rootprefix = '../../' %}{% endif %}
   <title>{% if page.title and page.title != 'home' %}{{ page.title | escape }} · {% endif %}{{ profile.name | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ profile.name | escape }}'s notes" href="{{ '/feed.xml' | absolute_url }}">
   <link rel="stylesheet" href="{{ rootprefix }}assets/site.css">
