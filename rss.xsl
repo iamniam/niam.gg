@@ -28,8 +28,9 @@
       <body>
         <main>
           <h1>notes</h1>
-          <p class="intro">a little weblog. you're viewing an RSS feed, which lets you follow updates in an RSS reader.</p>
-          <p><a href="rss/">read these notes as a webpage</a> · <a href="index.html">homepage</a></p>
+          <p class="intro">a little web blog.</p>
+          <p>to follow along, add <a href="feed.xml">https://niam.gg/feed.xml</a> to an rss reader.</p>
+          <p><a href="index.html">homepage</a></p>
           <xsl:choose>
             <xsl:when test="channel/item">
               <xsl:for-each select="channel/item">
