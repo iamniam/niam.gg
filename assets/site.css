@@ -29,7 +29,7 @@ a:hover { color: #c00; }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .masthead {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 20px;
   align-items: baseline;
   padding-bottom: 9px;
