@@ -21,7 +21,9 @@
   <div class="page">
     <header class="masthead">
       <a class="site-name" href="{{ rootprefix }}index.html">{{ profile.name | escape }}</a>
-      <a class="rss-link" href="{{ rootprefix }}feed.xml" type="application/rss+xml">rss</a>
+      {% if profile.x and profile.x != empty %}
+      <a class="rss-link" href="{{ profile.x | escape }}" rel="me noopener noreferrer">𝕏</a>
+      {% endif %}
     </header>
     {{ content }}
     <footer class="footer">
