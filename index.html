@@ -28,7 +28,7 @@ description: "niam dennegar's personal homepage. building in public."
   </section>
 
   <section class="section" id="notes">
-    <h2>notes</h2>
+    <h2>blog</h2>
     {% for post in site.posts limit: 10 %}
     <article class="note">
       <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' | downcase }}</time>
