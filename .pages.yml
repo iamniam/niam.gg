@@ -1,0 +1,78 @@
+# Visual editing for https://app.pagescms.org — no HTML editing needed.
+media:
+  input: media
+  output: /media
+content:
+  - name: profile
+    label: Bio & links
+    type: file
+    path: _data/profile.yml
+    format: yaml
+    operations:
+      delete: false
+    fields:
+      - name: name
+        label: Your name
+        type: string
+        required: true
+      - name: headline
+        label: Main heading
+        type: string
+        required: true
+      - name: tagline
+        label: One-line bio
+        type: string
+      - name: about
+        label: About you
+        type: text
+      - name: currently
+        label: What you're up to
+        type: text
+      - name: github
+        label: GitHub profile link
+        type: string
+        description: "Complete https:// URL. Leave blank to hide."
+      - name: x
+        label: X profile link
+        type: string
+        description: "Complete https:// URL. Leave blank to hide."
+      - name: email
+        label: Public contact email
+        type: string
+        description: "Optional. Leave blank to hide."
+      - name: footer
+        label: Footer text
+        type: string
+  - name: posts
+    label: Notes / RSS posts
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{title}.md"
+    view:
+      fields: [title, date, published]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publication date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: published
+        label: Publish this note?
+        type: boolean
+        default: true
+      - name: body
+        label: Write your note
+        type: rich-text
+        options:
+          format: markdown
+          switcher: false
