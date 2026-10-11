@@ -20,13 +20,12 @@
 <body>
   <div class="page">
     <header class="masthead">
-      <a class="site-name" href="{{ rootprefix }}index.html">{{ profile.name | escape }}<span class="dot">.</span></a>
-      <a class="rss-link" href="{{ rootprefix }}feed.xml" type="application/rss+xml">rss ↗</a>
+      <a class="site-name" href="{{ rootprefix }}index.html">{{ profile.name | escape }}</a>
+      <a class="rss-link" href="{{ rootprefix }}feed.xml" type="application/rss+xml">rss</a>
     </header>
     {{ content }}
     <footer class="footer">
-      <span>© {{ site.time | date: '%Y' }} {{ profile.name | escape }} · {{ profile.footer | escape }}</span>
-      <span>no algorithms required.</span>
+      <span>© 2026 Ordinary Inc.</span>
     </footer>
   </div>
 </body>
