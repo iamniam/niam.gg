@@ -7,11 +7,10 @@
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>notes — RSS</title>
+        <title>RSS</title>
         <style>
           body{margin:0;background:#fff;color:#111;font:16px/1.5 Georgia,"Times New Roman",Times,serif}
           main{max-width:760px;margin:0 auto;padding:28px 24px 35px}
-          h1{font-size:28px;margin:0 0 12px}
           a{color:#0000ee;text-decoration:underline}
           a:visited{color:#551a8b}
           h2{font-size:20px;margin:4px 0 10px}
@@ -27,7 +26,6 @@
       </head>
       <body>
         <main>
-          <h1>notes</h1>
           <p class="intro">a little web blog.</p>
           <p>to follow along, add <a href="feed.xml">https://niam.gg/feed.xml</a> to an rss reader.</p>
           <p><a href="index.html">homepage</a></p>
@@ -46,7 +44,7 @@
                 </article>
               </xsl:for-each>
             </xsl:when>
-            <xsl:otherwise><p>no notes published yet.</p></xsl:otherwise>
+            <xsl:otherwise><p>no posts published yet.</p></xsl:otherwise>
           </xsl:choose>
           <p class="footer"><small>© 2026 Ordinary Inc.</small></p>
         </main>
