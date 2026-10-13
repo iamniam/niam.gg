@@ -1,6 +1,6 @@
 ---
 title: hello internet
-date: 2004-08-05
+date: 2005-10-06
 published: true
 ---
 how does this thing work?
