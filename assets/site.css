@@ -79,6 +79,10 @@ nav { display: flex; gap: 7px 20px; flex-wrap: wrap; }
 .note h3 a:visited { color: #551a8b; }
 .note p { font-size: 15px; }
 .links { display: flex; gap: 7px 20px; flex-wrap: wrap; }
+.tip { margin-top: 13px; }
+.tip-address-details { margin-top: 5px; font-size: 13px; color: var(--muted); }
+.tip-address-details summary { cursor: pointer; }
+.tip-address { display: block; margin-top: 4px; color: var(--text); overflow-wrap: anywhere; user-select: all; }
 .footer {
   border-top: 1px solid var(--rule);
   padding-top: 15px;
