@@ -5,15 +5,13 @@ date: 2026-11-07 12:00:00 -0600
 
 *As courts and regulators challenge Apple and Google’s control over app distribution, building for the web has started to feel like a statement about what software should be.*
 
-By Niam Dennegar
-
 The least interesting thing about the app I’m building should be how someone installs it.
 
 I want to talk about what happens when they open it. Whether the interface makes sense. Whether something that used to take five steps now takes two. Whether the product is useful enough that someone sends it to a friend without being asked.
 
 Instead, building software means confronting a question that arrives before any of those: How do I get this onto somebody’s phone?
 
-In an [October 19 account of his experience with App Review](https://dev.to/mattbusel/apples-43-spam-check-is-a-30-second-batch-job-22-rejections-prove-it-3nab), developer Matt Busel, who identifies himself as [based in New York](https://github.com/Mattbusel), reported that Apple had rejected 11 of his iPhone apps twice under its spam guideline. He described two batches of rejection notices arriving seconds apart and said three appeals remained unanswered as of his publication date.
+In an [October 19 account of his experience with App Review](https://dev.to/mattbusel/apples-43-spam-check-is-a-30-second-batch-job-22-rejections-prove-it-3nab), Matt Busel a [New York based developer](https://github.com/Mattbusel), reported that Apple had rejected 11 of his iPhone apps twice under its spam guideline. He described two batches of rejection notices arriving seconds apart and said three appeals remained unanswered as of his publication date.
 
 His account captures a particular kind of frustration: You can finish building something and still have little clarity about when, or whether, someone will be able to use it.
 
