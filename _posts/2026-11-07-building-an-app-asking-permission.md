@@ -31,7 +31,6 @@ for someone trying to turn an idea into an actual product, that is a compelling 
 
 it also changes the question. instead of asking how to convince somebody to download something, i can ask how quickly i can give them a reason to care.
 
-***
 
 i like ambitious software. i want to build products that feel considered, capable and almost obvious once you use them. the kind where a difficult technical problem disappears into an interaction so simple that nobody thinks to compliment it.
 
@@ -49,7 +48,6 @@ i want to earn it.
 
 the web gives me a way to make that the starting assumption. try the thing. see whether it helps. decide whether you want to come back.
 
-***
 
 there are limits, and they matter.
 
@@ -63,7 +61,6 @@ i don’t want to ship a worse product just to make a point about distribution.
 
 but i also don’t want to assume a product needs an app-store listing before i have worked out what its users actually need. the decision should follow the experience i’m trying to create. otherwise, i’m designing around the packaging before i’ve finished thinking about what goes inside.
 
-***
 
 these recent stories matter to me because these choices take place inside rules that developers do not write.
 
@@ -81,7 +78,6 @@ you can put it in a message. someone can open it, try something and tell you whe
 
 there is plenty of difficult work in that loop. finding users, keeping the service running and making it worth returning to are all still your responsibility. but the loop itself makes sense to me.
 
-***
 
 i’m building a pwa because i want to find out how much i can accomplish that way. i want to make something polished enough that its delivery method becomes a detail, rather than the first thing i have to defend.
 
